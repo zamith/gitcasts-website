@@ -7,6 +7,7 @@ gem 'coffee-rails'
 gem 'email_validator'
 gem 'jquery-rails'
 gem 'pg'
+gem 'puma'
 gem 'rack-timeout'
 gem 'rails'
 gem 'recipient_interceptor'
@@ -15,7 +16,6 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'title'
 gem 'uglifier'
-gem 'unicorn'
 
 group :development do
   gem 'foreman'
@@ -43,4 +43,5 @@ end
 
 group :staging, :production do
   gem 'newrelic_rpm', '>= 3.7.3'
+  gem 'rails_12factor'
 end
