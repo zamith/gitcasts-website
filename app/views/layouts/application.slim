@@ -4,18 +4,26 @@ html
     meta charset="utf-8"
     meta name="ROBOTS" content="NOODP"
     title = title
-    link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700' rel='stylesheet' type='text/css'
+    link href='http://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Lato:300italic,400italic' rel='stylesheet' type='text/css'
     = stylesheet_link_tag :application, media: 'all'
     = csrf_meta_tags
   body
     header
-      h1.title
-        span.title-first-word git
-        span.title-last-word casts
+      = link_to root_path
+        h1.title
+          span.title-first-word git
+          span.title-last-word casts
+
+      span.inspirational-sentence Providing you your daily dosage of git
 
     .container
       = render 'flashes'
 
       = yield
+
+    footer
+      p.credits
+        | Brought to you by&nbsp;
+        = link_to "Luís Zamith", "http://blog.zamith.pt/"
 
     = render 'javascript'

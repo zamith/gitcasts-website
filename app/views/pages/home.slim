@@ -1,5 +1,7 @@
 section.episodes
-  h1.episode-section-title All Gitcasts
-
-  .video
-    .video-number
+  ul
+    li.episode
+      .episode-number 1
+      .episode-info
+        = link_to "A thousand ways to start a project with git init", gitcast_path(id: 1), class: "episode-name"
+        .episode-extra-info November 13, 2014 - 6:33 min

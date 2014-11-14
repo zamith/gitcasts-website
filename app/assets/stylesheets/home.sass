@@ -1,6 +1,27 @@
 .episodes
   margin-top: $default-spacing * 4
 
-.episode-section-title
-  color: $color-git-main
-  font-size: $font-title
+.episode
+  > *
+    display: inline-block
+
+  .episode-number
+    color: $color-git-yellow
+    font-size: $font-large
+    font-weight: 300
+    min-width: 70px
+    vertical-align: super
+
+  .episode-name
+    color: $color-git-secondary
+    font-size: $font-title
+    text-decoration: none
+
+    &:hover
+      text-decoration: underline
+
+  .episode-extra-info
+    color: $color-git-semi-light
+    font-family: 'Lato', sans-serif
+    font-style: italic
+    font-weight: 300

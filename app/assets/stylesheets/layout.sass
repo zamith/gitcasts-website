@@ -1,9 +1,66 @@
+*
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  margin: 0
+
+html, body
+  height: 100%
+
+li
+  list-style: none
+
+ul
+  padding: 0
+
+a
+  color: $color-git-main
+
+  &:hover
+    color: darken($color-git-main, 15%)
+
 header
   background-color: $color-git-light
+  border-bottom: 1px solid $color-git-semi-light
   height: $header-height
   line-height: $header-height
-  border-bottom: 1px solid $color-git-semi-light
+
+.title
+  display: inline-block
+
+.title-first-word
+  color: $color-git-main
+
+.title-last-word
+  color: $color-git-secondary
+
+.inspirational-sentence
+  color: $color-git-semi-light
+  float: right
+  font-family: 'Lato', sans-serif
+  font-style: italic
+  margin-right: 32px
 
 .container
-  width: $page-width
   margin: 0 auto
+  min-height: calc(100% - (#{$header-height} + #{$default-spacing} * 4) - 1px)
+  margin-bottom: -$footer-height
+  width: $page-width
+
+  &:after
+    content: ""
+    display: block
+
+footer, .container:after
+  height: $footer-height
+
+footer
+  text-align: center
+  margin: 0 auto
+  vertical-align: top
+  width: $page-width
+
+.credits
+  color: $color-git-semi-light
+  font-family: 'Lato', sans-serif
+  font-size: $font-small
+  font-style: italic
