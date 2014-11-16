@@ -1,6 +1,6 @@
 class Gitcast
   GITCASTS = {
-    "1" => "//www.youtube.com/embed/Ag3DQyIfwiY"
+    "1" => "//www.youtube.com/embed/sLOrOQTZCOc"
   }
 
   attr_reader :src
