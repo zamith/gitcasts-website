@@ -1,15 +1,5 @@
-class Gitcast
-  GITCASTS = {
-    "1" => "//www.youtube.com/embed/sLOrOQTZCOc"
-  }
+class Gitcast < ActiveRecord::Base
+  default_scope -> { order('created_at DESC') }
 
-  attr_reader :src
-
-  def self.find(id)
-    Gitcast.new src: GITCASTS[id]
-  end
-
-  def initialize(src: "")
-    @src = src
-  end
+  validates_presence_of :name, :src
 end

@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-ruby '2.0.0'
-
 gem 'bourbon'
 gem 'coffee-rails'
 gem 'email_validator'
@@ -28,6 +26,7 @@ group :development, :test do
   gem 'dotenv-rails'
   gem 'factory_girl_rails'
   gem 'pry-rails'
+  gem 'quiet_assets'
   gem 'rspec-rails', '>= 2.14'
 end
 
