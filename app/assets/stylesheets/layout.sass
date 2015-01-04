@@ -42,13 +42,29 @@ header
 
 .container
   margin: 0 auto
-  min-height: calc(100% - (#{$header-height} + #{$default-spacing} * 4) - 1px)
+  min-height: calc(100% - #{$header-height} - 1px)
   margin-bottom: -$footer-height
   width: $page-width
 
   &:after
     content: ""
     display: block
+
+.main-content
+  display: inline-block
+  width: calc(#{$page-width} - #{$donation-width})
+
+.donation
+  float: right
+  margin-top: $default-spacing * 4
+  width: $donation-width
+
+  p
+    font-size: $font-small
+    margin-bottom: $default-spacing
+
+  form
+    text-align: center
 
 footer, .container:after
   height: $footer-height

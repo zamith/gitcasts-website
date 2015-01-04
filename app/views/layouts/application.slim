@@ -10,6 +10,8 @@ html
     link rel="icon" type="image/png" href="#{image_path 'favicon-16x16.png'}" sizes="16x16"
     = auto_discovery_link_tag :atom, feed_path
     = auto_discovery_link_tag :rss, feed_path(format: :rss)
+    - if Rails.env.production?
+      = render 'shared/google_analytics'
     = csrf_meta_tags
   body
     header
@@ -23,7 +25,11 @@ html
     .container
       = render 'flashes'
 
-      = yield
+      .main-content
+        = yield
+
+      .donation
+        = render 'shared/donation'
 
     footer
       p.credits
