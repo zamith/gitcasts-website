@@ -1,7 +1,8 @@
 section.episodes
   ul
-    li.episode
-      .episode-number 1
-      .episode-info
-        = link_to "A thousand ways to start a project with git init", gitcast_path(id: 1), class: "episode-name"
-        .episode-extra-info November 13, 2014 - 6:33 min
+    - @gitcasts.each do |gitcast|
+      li.episode
+        .episode-number = gitcast.episode_number
+        .episode-info
+          = link_to gitcast.name, gitcast_path(gitcast), class: "episode-name"
+          .episode-extra-info = l(gitcast.created_at, format: :date) + " - #{gitcast.length}"
